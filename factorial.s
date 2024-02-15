@@ -1,5 +1,4 @@
 .text
-message: .asciz "ASSIGNMENT 2: Factorial\nTeam 139:\nDiogo Piteira Castelos - NetID: dcastelos\nFilip Angheluta - NetID: fangheluta\n\n"
 prompt: .asciz "Let's factorialize!\nEnter non-negative number: "
 input: .asciz "%ld"
 output: .asciz "Your factorialized number is: %ld\n"
@@ -12,11 +11,6 @@ main:
 	# prologue
 	pushq %rbp # push the base pointer
 	movq %rsp , %rbp # copy stack pointer value to base pointer
-
-	# print out student details
-	movq $0 , %rax # no vector registers in use for printf
-	movq $message , %rdi # first parameter: the message string
-	call printf # call printf to print message
 
 	# print out first prompt
 	movq $0 , %rax # no vector registers in use for printf
